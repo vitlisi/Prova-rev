@@ -19,7 +19,7 @@ find_package(std_msgs REQUIRED)
 # further dependencies manually.
 # find_package(<dependency> REQUIRED)
 
-add_executable(ros2_kdl_node src/ros2_kdl_node.cpp src/kdl_robot.cpp src/kdl_planner.cpp src/kdl_control.cpp)
+add_executable(ros2_kdl_node src/ros2_kdl_vision_control.cpp src/kdl_robot.cpp src/kdl_planner.cpp src/kdl_control.cpp)
 target_include_directories(ros2_kdl_node PUBLIC
   $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
   $<INSTALL_INTERFACE:include>

@@ -12,7 +12,7 @@ public:
 
     KDLController(KDLRobot &_robot);
 
-    Eigen::VectorXd idCntr_2(KDL::JntArray &_qd,
+    Eigen::VectorXd idCntr(KDL::JntArray &_qd,
                            KDL::JntArray &_dqd,
                            KDL::JntArray &_ddqd,
                            double _Kp,

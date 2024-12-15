@@ -224,10 +224,6 @@ Eigen::VectorXd KDLRobot::getEEJacDotqDot()
     return jacobian_dot_q_dot;
 }
 
-
-
-
-
 void KDLRobot::addEE(const KDL::Frame &_f_F_ee)
 {
     f_F_ee_ = _f_F_ee;

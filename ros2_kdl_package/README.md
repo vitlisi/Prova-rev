@@ -34,3 +34,12 @@ in this case the robot must be launched with the velocity interface
 ```
 $ ros2 launch iiwa_bringup iiwa.launch.py command_interface:="velocity" robot_controller:="velocity_controller"
 ```
+
+To use the effort commands 
+```
+$ ros2 run ros2_kdl_package ros2_kdl_node --ros-args -p cmd_interface:=effort
+```
+in this case the robot must be launched with the velocity interface
+```
+$ ros2 launch iiwa_bringup iiwa.launch.py command_interface:="effort" robot_controller:="effort_controller"
+```

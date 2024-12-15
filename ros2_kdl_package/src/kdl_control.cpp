@@ -6,7 +6,7 @@ KDLController::KDLController(KDLRobot &_robot)
     robot_ = &_robot;
 }
 
-Eigen::VectorXd KDLController::idCntr_2(KDL::JntArray &_qd,
+Eigen::VectorXd KDLController::idCntr(KDL::JntArray &_qd,
                                       KDL::JntArray &_dqd,
                                       KDL::JntArray &_ddqd,
                                       double _Kp, double _Kd)

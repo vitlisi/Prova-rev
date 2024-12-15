@@ -222,6 +222,16 @@ inline void computeErrors(const KDL::Frame &_Fd,
     edot << computeLinearError(toEigen(_Vd.vel), toEigen(_Ve.vel)), -toEigen(_Ve.rot);//computeOrientationVelocityError(toEigen(_Vd.rot), toEigen(_Ve.rot), R_d, R_e);
 }
 
+inline KDL::Rotation toKDL(const Eigen::Matrix3d& R)
+{
+    return KDL::Rotation(
+        R(0,0), R(0,1), R(0,2),
+        R(1,0), R(1,1), R(1,2),
+        R(2,0), R(2,1), R(2,2)
+    );
+}
+
+
 inline Eigen::MatrixXd weightedPseudoInverse(const Eigen::MatrixXd &W,
                                              const Eigen::MatrixXd &Mat)
 {
